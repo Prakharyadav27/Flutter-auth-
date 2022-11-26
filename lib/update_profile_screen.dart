@@ -6,12 +6,17 @@ class ProfilePage extends StatelessWidget {
   TextEditingController emailEditingController = TextEditingController();
   TextEditingController genderEditingController = TextEditingController();
   TextEditingController addressEditingController = TextEditingController();
+  TextEditingController SkillsEditingController = TextEditingController();
+  TextEditingController ageEditingController = TextEditingController();
+  TextEditingController StateEditingController = TextEditingController();
 
   ProfilePage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: false,
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         elevation: 0.0,
         backgroundColor: Colors.orange,
@@ -95,10 +100,31 @@ class ProfilePage extends StatelessWidget {
                         editingController: addressEditingController,
                         hintText: 'Address',
                       ),
+                      textfield(
+                        editingController: ageEditingController,
+                        hintText: 'Age',
+                      ),
+                      textfield(
+                        editingController: SkillsEditingController,
+                        hintText: 'Skills',
+                      ),
+                      // textfield(
+                      //   editingController: StateEditingController,
+                      //   hintText: 'State',
+                      // ),
                       SizedBox(
-                        height: 55,
+                        height: 30,
+                      ),
+                      SizedBox(
+                        height: 60,
                         width: double.infinity,
-                        child: TextButton(
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            primary: Colors.green.shade600,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                          ),
                           onPressed: () {
                             Navigator.push(
                                 context,
@@ -117,7 +143,7 @@ class ProfilePage extends StatelessWidget {
                               "Update",
                               style: TextStyle(
                                 fontSize: 23,
-                                color: Colors.orange,
+                                color: Colors.white,
                               ),
                             ),
                           ),

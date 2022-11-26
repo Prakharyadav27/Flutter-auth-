@@ -1,16 +1,30 @@
 import 'package:flutter/material.dart';
 
+import 'update_profile_screen.dart';
+
 class ShowProfile extends StatelessWidget {
   String? username;
   String? email;
   String? gender;
   String? address;
+  String? age;
+  String? Skills;
+  //String? State;
+
   ShowProfile(
-      {super.key, this.address, this.username, this.gender, this.email});
+      {super.key,
+      this.address,
+      this.username,
+      this.gender,
+      this.email,
+      this.age,
+      this.Skills});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: false,
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         elevation: 0.0,
         backgroundColor: Colors.orange,
@@ -48,7 +62,7 @@ class ShowProfile extends StatelessWidget {
                     const Padding(
                       padding: EdgeInsets.all(20),
                       child: Text(
-                        "Profile",
+                        "Profile Info",
                         style: TextStyle(
                           fontSize: 35,
                           letterSpacing: 1.5,
@@ -92,22 +106,40 @@ class ShowProfile extends StatelessWidget {
                       customContainer(
                         text: address ?? "Address",
                       ),
+                      customContainer(
+                        text: age ?? "age",
+                      ),
+                      customContainer(
+                        text: Skills ?? "Skills",
+                      ),
+                      // customContainer(
+                      //   text: address ?? "State",
+                      // ),
+                      SizedBox(
+                        height: 30,
+                      ),
                       SizedBox(
                         height: 55,
                         width: double.infinity,
-                        child: TextButton(
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            primary: Colors.green.shade600,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                          ),
                           onPressed: () {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => ShowProfile()));
+                                    builder: (context) => ProfilePage()));
                           },
                           child: const Center(
                             child: Text(
-                              "Update",
+                              "Edit Info",
                               style: TextStyle(
                                 fontSize: 23,
-                                color: Colors.orange,
+                                color: Colors.white,
                               ),
                             ),
                           ),

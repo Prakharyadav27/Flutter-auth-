@@ -14,15 +14,14 @@ void main() async {
   await Firebase.initializeApp();
 
   runApp(MaterialApp(
-    
-    initialRoute: 'phone',
+    initialRoute: 'updatescreen',
     debugShowCheckedModeBanner: false,
     routes: {
       // Display.id: (context) => Display(),
-      'phone': (context) =>const MyPhone(),
+      'phone': (context) => const MyPhone(),
       'verify': (context) => const MyVerify(),
       'updatescreen': (context) => ProfilePage(),
-      'showInfoProfile':(context) => ShowProfile()
+      'showInfoProfile': (context) => ShowProfile()
       // 'home': (context) => MyHome(),
     },
   ));
