@@ -1,5 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:testapk2/showInfo.dart';
 
 class ProfilePage extends StatelessWidget {
   TextEditingController usernameEditingController = TextEditingController();
@@ -99,7 +99,19 @@ class ProfilePage extends StatelessWidget {
                         height: 55,
                         width: double.infinity,
                         child: TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => ShowProfile(
+                                          username:
+                                              usernameEditingController.text,
+                                          email: emailEditingController.text,
+                                          gender: genderEditingController.text,
+                                          address:
+                                              addressEditingController.text,
+                                        )));
+                          },
                           child: const Center(
                             child: Text(
                               "Update",
