@@ -11,14 +11,15 @@ import 'package:testapk2/verify.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  //wow
+
   runApp(MaterialApp(
+    
     initialRoute: 'phone',
     debugShowCheckedModeBanner: false,
     routes: {
       // Display.id: (context) => Display(),
-      'phone': (context) => MyPhone(),
-      'verify': (context) => MyVerify(),
+      'phone': (context) =>const MyPhone(),
+      'verify': (context) => const MyVerify(),
       'updatescreen': (context) => ProfilePage(),
       // 'home': (context) => MyHome(),
     },

@@ -24,7 +24,7 @@ class _MyPhoneState extends State<MyPhone> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        margin: EdgeInsets.only(left: 25, right: 25),
+        margin: const EdgeInsets.only(left: 25, right: 25),
         alignment: Alignment.center,
         child: SingleChildScrollView(
           child: Column(
@@ -35,24 +35,24 @@ class _MyPhoneState extends State<MyPhone> {
                 width: 150,
                 height: 150,
               ),
-              SizedBox(
+           const   SizedBox(
                 height: 25,
               ),
-              Text(
+          const    Text(
                 "Phone Verification",
                 style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
               ),
-              SizedBox(
+          const    SizedBox(
                 height: 10,
               ),
-              Text(
+           const   Text(
                 "We need to register your phone without getting started!",
                 style: TextStyle(
                   fontSize: 16,
                 ),
                 textAlign: TextAlign.center,
               ),
-              SizedBox(
+          const    SizedBox(
                 height: 30,
               ),
               Container(
@@ -63,7 +63,7 @@ class _MyPhoneState extends State<MyPhone> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    SizedBox(
+                  const  SizedBox(
                       width: 10,
                     ),
                     SizedBox(
@@ -71,16 +71,16 @@ class _MyPhoneState extends State<MyPhone> {
                       child: TextField(
                         controller: countryController,
                         keyboardType: TextInputType.number,
-                        decoration: InputDecoration(
+                        decoration:const InputDecoration(
                           border: InputBorder.none,
                         ),
                       ),
                     ),
-                    Text(
+                  const  Text(
                       "|",
                       style: TextStyle(fontSize: 33, color: Colors.grey),
                     ),
-                    SizedBox(
+                const    SizedBox(
                       width: 10,
                     ),
                     Expanded(
@@ -89,7 +89,7 @@ class _MyPhoneState extends State<MyPhone> {
                         phone = value;
                       }),
                       keyboardType: TextInputType.phone,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         border: InputBorder.none,
                         hintText: "Phone",
                       ),
@@ -97,7 +97,7 @@ class _MyPhoneState extends State<MyPhone> {
                   ],
                 ),
               ),
-              SizedBox(
+           const   SizedBox(
                 height: 20,
               ),
               SizedBox(
@@ -110,7 +110,7 @@ class _MyPhoneState extends State<MyPhone> {
                             borderRadius: BorderRadius.circular(10))),
                     onPressed: () async {
                       await FirebaseAuth.instance.verifyPhoneNumber(
-                        phoneNumber: '${countryController.text + phone}',
+                        phoneNumber: countryController.text + phone,
                         verificationCompleted:
                             (PhoneAuthCredential credential) {},
                         verificationFailed: (FirebaseAuthException e) {},
@@ -120,9 +120,9 @@ class _MyPhoneState extends State<MyPhone> {
                         },
                         codeAutoRetrievalTimeout: (String verificationId) {},
                       );
-                      //Navigator.pushNamed(context, 'verify');
+                     // Navigator.pushNamed(context, 'verify');
                     },
-                    child: Text("Send the code")),
+                    child:const Text("Send the code")),
               )
             ],
           ),
