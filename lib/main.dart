@@ -3,6 +3,7 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 //import 'package:testapk2/homepage.dart';
 import 'package:testapk2/phone.dart';
+import 'package:testapk2/showInfo.dart';
 import 'package:testapk2/update_profile_screen.dart';
 import 'package:testapk2/verify.dart';
 
@@ -21,6 +22,7 @@ void main() async {
       'phone': (context) =>const MyPhone(),
       'verify': (context) => const MyVerify(),
       'updatescreen': (context) => ProfilePage(),
+      'showInfoProfile':(context) => ShowProfile()
       // 'home': (context) => MyHome(),
     },
   ));

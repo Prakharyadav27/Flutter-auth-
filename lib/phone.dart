@@ -35,24 +35,24 @@ class _MyPhoneState extends State<MyPhone> {
                 width: 150,
                 height: 150,
               ),
-           const   SizedBox(
+              const SizedBox(
                 height: 25,
               ),
-          const    Text(
+              const Text(
                 "Phone Verification",
                 style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
               ),
-          const    SizedBox(
+              const SizedBox(
                 height: 10,
               ),
-           const   Text(
+              const Text(
                 "We need to register your phone without getting started!",
                 style: TextStyle(
                   fontSize: 16,
                 ),
                 textAlign: TextAlign.center,
               ),
-          const    SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               Container(
@@ -63,7 +63,7 @@ class _MyPhoneState extends State<MyPhone> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                  const  SizedBox(
+                    const SizedBox(
                       width: 10,
                     ),
                     SizedBox(
@@ -71,16 +71,16 @@ class _MyPhoneState extends State<MyPhone> {
                       child: TextField(
                         controller: countryController,
                         keyboardType: TextInputType.number,
-                        decoration:const InputDecoration(
+                        decoration: const InputDecoration(
                           border: InputBorder.none,
                         ),
                       ),
                     ),
-                  const  Text(
+                    const Text(
                       "|",
                       style: TextStyle(fontSize: 33, color: Colors.grey),
                     ),
-                const    SizedBox(
+                    const SizedBox(
                       width: 10,
                     ),
                     Expanded(
@@ -97,7 +97,7 @@ class _MyPhoneState extends State<MyPhone> {
                   ],
                 ),
               ),
-           const   SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               SizedBox(
@@ -120,9 +120,9 @@ class _MyPhoneState extends State<MyPhone> {
                         },
                         codeAutoRetrievalTimeout: (String verificationId) {},
                       );
-                     // Navigator.pushNamed(context, 'verify');
+                      // Navigator.pushNamed(context, 'verify');
                     },
-                    child:const Text("Send the code")),
+                    child: const Text("Send the code")),
               )
             ],
           ),
