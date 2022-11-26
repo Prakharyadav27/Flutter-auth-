@@ -11,6 +11,7 @@ import 'package:testapk2/verify.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
+  //wow
   runApp(MaterialApp(
     initialRoute: 'phone',
     debugShowCheckedModeBanner: false,
