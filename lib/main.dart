@@ -9,7 +9,7 @@ import 'package:testapk2/update_profile_screen.dart';
 import 'package:testapk2/verify.dart';
 
 //import 'Display.dart';
-//FirebaseMessaging _firebaseMessaging =x FirebaseMessaging.instance;
+FirebaseMessaging _firebaseMessaging = FirebaseMessaging.instance;
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
