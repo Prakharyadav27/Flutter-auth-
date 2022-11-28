@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import 'update_profile_screen.dart';
 
@@ -129,10 +130,7 @@ class ShowProfile extends StatelessWidget {
                             ),
                           ),
                           onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => ProfilePage()));
+                            Get.to(ProfilePage());
                           },
                           child: const Center(
                             child: Text(

@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_navigation/get_navigation.dart';
 //import 'package:testapk2/homepage.dart';
 import 'package:testapk2/phone.dart';
 import 'package:testapk2/showInfo.dart';
@@ -13,8 +14,8 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
 
-  runApp(MaterialApp(
-    initialRoute: 'updatescreen',
+  runApp(GetMaterialApp(
+    initialRoute: 'phone',
     debugShowCheckedModeBanner: false,
     routes: {
       // Display.id: (context) => Display(),

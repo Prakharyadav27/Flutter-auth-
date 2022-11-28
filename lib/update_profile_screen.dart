@@ -127,16 +127,18 @@ class ProfilePage extends StatelessWidget {
                           ),
                           onPressed: () {
                             Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => ShowProfile(
-                                          username:
-                                              usernameEditingController.text,
-                                          email: emailEditingController.text,
-                                          gender: genderEditingController.text,
-                                          address:
-                                              addressEditingController.text,
-                                        )));
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => ShowProfile(
+                                  username: usernameEditingController.text,
+                                  email: emailEditingController.text,
+                                  gender: genderEditingController.text,
+                                  address: addressEditingController.text,
+                                  age: ageEditingController.text,
+                                  Skills: SkillsEditingController.text,
+                                ),
+                              ),
+                            );
                           },
                           child: const Center(
                             child: Text(
